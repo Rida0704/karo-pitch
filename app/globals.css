@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #0f0f11;
+  --surface: #1c1c1e;
+  --surface-2: #18181b;
+  --card-border: rgba(255, 255, 255, 0.08);
+  --card-border-strong: rgba(255, 255, 255, 0.12);
+
+  --accent: #ff5722;
+  --accent-2: #ffb703;
+
+  --text: #ffffff;
+  --muted: #a1a1aa;
+
+  --glow-saffron: rgba(255, 87, 34, 0.2);
+  --glow-gold: rgba(255, 183, 3, 0.16);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background:
+    radial-gradient(circle at 18% 16%, rgba(255, 87, 34, 0.08), transparent 26%),
+    radial-gradient(circle at 82% 18%, rgba(255, 183, 3, 0.07), transparent 22%),
+    radial-gradient(circle at 52% 78%, rgba(255, 87, 34, 0.05), transparent 30%),
+    var(--bg);
+  color: var(--text);
+  font-family: "Inter", sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Space Grotesk", sans-serif;
+  color: var(--text);
+  letter-spacing: -0.04em;
+}
+
+::selection {
+  background: rgba(255, 87, 34, 0.28);
+  color: #fff;
+}
+
+.glass {
+  background: rgba(28, 28, 30, 0.58);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--card-border);
+  box-shadow:
+    0 10px 40px rgba(0, 0, 0, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.03);
+}
+
+.glass-strong {
+  background: rgba(28, 28, 30, 0.76);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid var(--card-border-strong);
+  box-shadow:
+    0 18px 60px rgba(0, 0, 0, 0.34),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+.saffron-button {
+  background: linear-gradient(135deg, #ff5722 0%, #ff7a18 45%, #ffb703 100%);
+  color: white;
+  box-shadow:
+    0 18px 40px rgba(255, 87, 34, 0.24),
+    0 8px 20px rgba(255, 183, 3, 0.12);
+}
+
+.saffron-button:hover {
+  filter: brightness(1.05);
+  transform: translateY(-1px);
+}
+
+.outline-button {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: white;
+  backdrop-filter: blur(16px);
+}
+
+.outline-button:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.accent-text {
+  background: linear-gradient(135deg, #ffb703 0%, #ff5722 85%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.soft-label {
+  color: var(--muted);
+  font-weight: 500;
+  line-height: 1.55;
+}
+
+.grid-noise {
+  position: absolute;
+  inset: 0;
+  opacity: 0.06;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  background-size: 56px 56px;
+  pointer-events: none;
+}
+
+.hero-glow {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 22% 20%, rgba(255, 87, 34, 0.14), transparent 26%),
+    radial-gradient(circle at 78% 24%, rgba(255, 183, 3, 0.12), transparent 22%),
+    radial-gradient(circle at 58% 78%, rgba(255, 87, 34, 0.08), transparent 28%);
+  pointer-events: none;
+}
+
+.bento-card {
+  background: linear-gradient(180deg, rgba(28, 28, 30, 0.78), rgba(20, 20, 22, 0.88));
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow:
+    0 16px 40px rgba(0, 0, 0, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+.saffron-ring {
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.06),
+    0 0 0 8px rgba(255, 87, 34, 0.02),
+    0 0 40px rgba(255, 87, 34, 0.12);
+}
+
+.map-node-active {
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.22),
+    0 0 18px rgba(255, 87, 34, 0.42),
+    0 0 42px rgba(255, 183, 3, 0.18);
+}
+
+.map-node-idle {
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.08),
+    0 0 12px rgba(255, 183, 3, 0.08);
+}
